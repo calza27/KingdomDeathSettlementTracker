@@ -1,0 +1,12 @@
+#ignore config files and anything sesitive...
+config/
+.env
+
+#ignore generic laravel vendor folder and other geenric stuff...
+vendor/
+tests/
+storage/
+bootstrap/
+
+#don't ignore this file....
+!.gitignore
