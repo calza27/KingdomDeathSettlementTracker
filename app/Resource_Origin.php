@@ -27,7 +27,7 @@ class Resource_Origin extends Model {
 		return Nemesis::leftJoin('Resource_Origins', 'Nemesis.NemesisID', '=', 'Resource_Origins.NemesisID')
 		->whereNotNull('Resource_Origins.NemesisID')
 		->whereRaw('Nemesis.NemesisID = ?', [$this->NemesisID])
-		->('Nemesis.*')
+		->select('Nemesis.*')
 		->get();
 	}
 }
